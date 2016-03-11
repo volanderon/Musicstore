@@ -6,30 +6,31 @@
     <title>Music Store</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
-<div id="header">
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#account">My account</a>
-        <a href="#wishlist">My wishlist</a>
-        <a href="#checkout">Checkout</a>
-        <a href="#login">Log in</a>
-    </nav>
+    <div id="header">
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#account">My account</a>
+            <a href="#wishlist">My wishlist</a>
+            <a href="#checkout">Checkout</a>
+            <a href="#login">Log in</a>
+        </nav>
 
-    <header>
-        <img src="Images/logo.png">
-        <input type="search" placeholder="Search">
-        <img src="Images/bascet.png">
-    </header>
-</div>
+        <header>
+            <img src="images/logo.png">
+            <input type="search" placeholder="Search">
+            <img src="images/bascet.png">
+        </header>
+    </div>
 
-<div ng-view></div>
-<!--        
+    <div ui-view style="padding-top: 80px;"></div>
+
+<!--
         <figure>
             <img>
             <img>
@@ -84,6 +85,10 @@
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers/HomeCtrl.js"></script>
 
 </body>
 
