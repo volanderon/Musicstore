@@ -18,4 +18,20 @@ angular.module('myApp', [
             templateUrl: 'js/tpls/home.html',
             controller: 'HomeCtrl as home'
         })
+        .state("wishlist", {
+            url: "/wishlist",
+            templateUrl: 'js/tpls/wishlist.html',
+            controller: 'WishlistCtrl as wishlist'
+        })
+        .state("checkout", {
+            url: "/checkout",
+            templateUrl: 'js/tpls/checkout.html',
+            controller: 'CheckoutCtrl as checkout'
+        })
+        .state("login", {
+            url: "/login",
+            templateUrl: 'js/tpls/login.html',
+            controller: 'LoginCtrl as login'
+        })
+
 });
