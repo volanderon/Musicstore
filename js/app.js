@@ -23,6 +23,16 @@ angular.module('myApp', [
                 }
             }
         })
+        .state("album", {
+            url: "/album/:id",
+            templateUrl: 'js/tpls/album.html',
+            controller: 'AlbumCtrl as album',
+            resolve: {
+                album: function($http, $stateParams){
+                    return $http.get('/musicstore/api/album/' + $stateParams.id);
+                }
+            }
+        })
         .state("wishlist", {
             url: "/wishlist",
             templateUrl: 'js/tpls/wishlist.html',
