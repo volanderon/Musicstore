@@ -1,1 +1,16 @@
-{{album}}
+<breadcrumbs></breadcrumbs>
+
+<div class="row">
+    <div class="col-md-4" ui-sref="album({id: album.album.album_id})">
+        <div class="row">
+            <img class="col-xs-12" ng-src="images/{{album.album.image_path}}"><br>
+            <strong>{{::album.album.album_name}}</strong><br>
+            <strong>{{::album.album.album_artist}}</strong>
+        </div>
+        <div class="row">
+            <div class="col-md-4" ng-repeat="key in [1, 2, 3]" ui-sref="album({id: album.album.album_id})">
+                <img class="col-xs-12" ng-src="images/{{album.album.image_path}}">
+            </div>
+        </div>
+    </div>
+</div>
