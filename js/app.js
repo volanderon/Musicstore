@@ -16,7 +16,12 @@ angular.module('myApp', [
         .state("home", {
             url: "/",
             templateUrl: 'js/tpls/home.html',
-            controller: 'HomeCtrl as home'
+            controller: 'HomeCtrl as home',
+            resolve: {
+                albums: function($http){
+                    return $http.get('/musicstore/api/albums');
+                }
+            }
         })
         .state("wishlist", {
             url: "/wishlist",
