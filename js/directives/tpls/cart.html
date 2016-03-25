@@ -1,16 +1,21 @@
 <div>
     <h3>My Cart</h3>
     <div>
-        There are {{cart.count}} items in your cart
+        There are {{cart.items.length}} items in your cart
     </div>
-    <div>
-        Cart subtotal: ${{cart.total}}
+    <div class="clearfix">
+        Cart subtotal: ${{cart.total()}}
         <div class="pull-right btn btn-default">Checkout</div>
     </div>
     <hr>
-    <div ng-repeat="item in cart.items">
-        {{::item.album_name}}
+    <div class="row" ng-repeat="item in cart.items">
+        <img class="col-md-6" ng-src="images/{{item.image_path}}">
+        <div class="col-md-6">
+            {{::item.album_name}}<br>
+            Price: {{item.album_price * item.count | number}}<br>
+            {{item.count}} x {{::item.album_price}}
+        </div>
     </div>
     <hr>
-    <div class="pull-right btn btn-default">Clear Cart</div>
+    <div class="pull-right btn btn-default" ng-click="cart.clear()">Clear Cart</div>
 </div>
