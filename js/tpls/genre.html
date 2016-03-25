@@ -2,12 +2,17 @@
     <div class="col-md-10">
         <div class="col-md-3">
             <genre-sidebar></genre-sidebar>
+            <cart></cart>
         </div>
         <div class="col-md-8">
-            <div class="col-md-2" ng-repeat="album in ::genre.albums" ui-sref="album({id: album.album_id})">
+            <div class="col-md-4" ng-repeat="album in ::genre.albums" ui-sref="album({id: album.album_id})">
                 <img class="col-xs-12" ng-src="images/{{album.image_path}}"><br>
-                <strong>{{::album.album_name}}</strong><br>
-                <strong>{{::album.album_artist}}</strong>
+                <div>
+                    <strong>{{::album.album_artist}} - {{::album.album_name}}</strong>
+                </div>
+                <div>
+                    <div class="my-icon cart-icon pull-right"></div>
+                </div>
             </div>
         </div>
     </div>

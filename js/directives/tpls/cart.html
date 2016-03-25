@@ -1,0 +1,16 @@
+<div>
+    <h3>My Cart</h3>
+    <div>
+        There are {{cart.count}} items in your cart
+    </div>
+    <div>
+        Cart subtotal: ${{cart.total}}
+        <div class="pull-right btn btn-default">Checkout</div>
+    </div>
+    <hr>
+    <div ng-repeat="item in cart.items">
+        {{::item.album_name}}
+    </div>
+    <hr>
+    <div class="pull-right btn btn-default">Clear Cart</div>
+</div>
