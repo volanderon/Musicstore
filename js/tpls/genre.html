@@ -1,0 +1,5 @@
+<div class="col-md-2" ng-repeat="album in ::albums" ui-sref="album({id: album.album_id})">
+    <img class="col-xs-12" ng-src="images/{{album.image_path}}"><br>
+    <strong>{{::album.album_name}}</strong><br>
+    <strong>{{::album.album_artist}}</strong>
+</div>

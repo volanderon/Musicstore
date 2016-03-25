@@ -23,6 +23,16 @@ angular.module('myApp', [
                 }
             }
         })
+        .state("genre", {
+            url: "/genre/:id/:name",
+            templateUrl: 'js/tpls/genre.html',
+            controller: 'GenreCtrl as genre',
+            resolve: {
+                albums: function($http, $stateParams){
+                    return $http.get('/musicstore/api/albums', {params: { genre_id: $stateParams.id }});
+                }
+            }
+        })
         .state("album", {
             url: "/album/:id",
             templateUrl: 'js/tpls/album.html',
