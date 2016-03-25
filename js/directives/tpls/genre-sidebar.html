@@ -1,0 +1,5 @@
+<div>
+    <div ng-repeat="genre in ::genres" ui-sref="genre({id: genre.genre_id, name: genre.genre_name})">
+        {{::genre.genre_name}}
+    </div>
+</div>

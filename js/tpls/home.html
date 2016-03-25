@@ -15,12 +15,13 @@
 
 <div class="row">
     <div class="col-md-10">
-        <div class="col-md-2">
+        <div class="col-md-3">
             <div class="row" ng-repeat="album in ::home.albums.sidebar" ui-sref="album({id: album.album_id})">
                 <img class="col-xs-12" ng-src="images/{{album.image_path}}"><br>
                 <strong>{{::album.album_name}}</strong><br>
                 <strong>{{::album.album_artist}}</strong>
             </div>
+            <genre-sidebar></genre-sidebar>
         </div>
         <div class="col-md-8">
             <div class="col-md-4" ng-repeat="album in ::home.albums.content" ui-sref="album({id: album.album_id})">

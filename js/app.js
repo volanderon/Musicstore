@@ -29,7 +29,7 @@ angular.module('myApp', [
             controller: 'GenreCtrl as genre',
             resolve: {
                 albums: function($http, $stateParams){
-                    return $http.get('/musicstore/api/albums', {params: { genre_id: $stateParams.id }});
+                    return $http.get('/musicstore/api/albums/' + $stateParams.id);
                 }
             }
         })
