@@ -1,6 +1,12 @@
 <breadcrumbs></breadcrumbs>
 
+
+
 <div class="row">
+    <div class="col-md-3">
+        <genre-sidebar></genre-sidebar>
+        <cart add-to-cart="addToCart"></cart>
+    </div>
     <div class="col-md-4" ui-sref="album({id: album.album.album_id})">
         <div class="row">
             <img class="col-xs-12" ng-src="images/{{album.album.image_path}}"><br>

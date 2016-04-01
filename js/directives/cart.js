@@ -9,7 +9,6 @@ angular.module('myApp').directive('cart', function(){
 
            this.addToCart = function(album) {
                var index = that.items.indexOf(album);
-               dd(index);
                if (index > -1) {
                    that.items[index].count++;
                } else {
@@ -28,6 +27,10 @@ angular.module('myApp').directive('cart', function(){
 
            this.clear = function() {
                that.items = [];
+           };
+
+           this.clearItem = function(index) {
+               that.items.splice(index, 1);
            };
        }
    };
