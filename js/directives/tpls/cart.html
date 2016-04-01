@@ -1,14 +1,14 @@
 <div>
     <h3>My Cart</h3>
     <div>
-        There are {{cart.items.length}} items in your cart
+        There are {{cart.getItems().length}} items in your cart
     </div>
     <div class="clearfix">
         Cart subtotal: ${{cart.total()}}
-        <div class="pull-right btn btn-default" ng-if="cart.items.length">Checkout</div>
+        <div class="pull-right btn btn-default" ng-if="cart.getItems().length">Checkout</div>
     </div>
-    <hr ng-if="cart.items.length">
-    <div class="row" ng-repeat="item in cart.items">
+    <hr ng-if="cart.getItems().length">
+    <div class="row" ng-repeat="item in cart.getItems()">
         <img class="col-md-6" ng-src="images/{{item.image_path}}">
         <div class="col-md-6">
             <i class="fa fa-close pull-right" ng-click="cart.clearItem($index)"></i>
@@ -17,6 +17,6 @@
             {{item.count}} x {{::item.album_price}}
         </div>
     </div>
-    <hr ng-if="cart.items.length">
-    <div class="pull-right btn btn-default" ng-click="cart.clear()" ng-if="cart.items.length">Clear Cart</div>
+    <hr ng-if="cart.getItems().length">
+    <div class="pull-right btn btn-default" ng-click="cart.clear()" ng-if="cart.getItems().length">Clear Cart</div>
 </div>

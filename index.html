@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/card.css">
 </head>
-<body>
+<body ng-controller="MainCtrl as main">
     <div id="header">
         <nav>
             <a ui-sref="home">Home</a>
@@ -28,7 +28,10 @@
         <header>
             <img src="images/logo.png">
             <input type="search" placeholder="Search">
-            <img src="images/bascet.png">
+            <div class="pull-right">
+                <img src="images/bascet.png">
+                <div>{{main.getCartCount()}}</div>
+            </div>
         </header>
     </div>
 
@@ -42,6 +45,7 @@
 
     <script src="js/utils.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/controllers/MainCtrl.js"></script>
     <script src="js/controllers/HomeCtrl.js"></script>
     <script src="js/controllers/WishlistCtrl.js"></script>
     <script src="js/controllers/CheckoutCtrl.js"></script>
@@ -51,6 +55,7 @@
     <script src="js/directives/breadcrumbs.js"></script>
     <script src="js/directives/genre-sidebar.js"></script>
     <script src="js/directives/cart.js"></script>
+    <script src="js/services/Cart.js"></script>
 
 </body>
 
