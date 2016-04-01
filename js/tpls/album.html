@@ -10,13 +10,26 @@
     <div class="col-md-4" ui-sref="album({id: album.album.album_id})">
         <div class="row">
             <img class="col-xs-12" ng-src="images/{{album.album.image_path}}"><br>
-            <strong>{{::album.album.album_name}}</strong><br>
-            <strong>{{::album.album.album_artist}}</strong>
         </div>
         <div class="row">
             <div class="col-md-4" ng-repeat="key in [1, 2, 3]" ui-sref="album({id: album.album.album_id})">
                 <img class="col-xs-12" ng-src="images/{{album.album.image_path}}">
             </div>
         </div>
+    </div>
+
+    <div class="col-md-5">
+        <div>
+            {{::album.album.album_name}}
+        </div>
+        <div>
+            Availability: {{::album.album.album_stock !== '0' ? 'In Stock' : 'Out of Stock'}}
+            <hr>
+            Only {{album.album.album_stock}} left
+        </div>
+        <div>
+            {{album.album.album_price | currency}}
+        </div>
+        <p>{{album.album.album_description}}</p>
     </div>
 </div>
