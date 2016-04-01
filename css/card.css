@@ -1,0 +1,8 @@
+.my-card {
+  margin-bottom: 20px;
+  color: white;
+}
+.my-card .mc-inner {
+  height: 380px;
+  background: black;
+}

@@ -4,15 +4,26 @@ body {
     position: absolute;
 }
 
+.truncate {
+    max-height: 100px;
+    overflow: hidden;
+
+}
+
 // ICONS
 
 .my-icon {
     width: 30px;
     height: 30px;
+    margin: 0 5px;
     display: inline-block;
     cursor: pointer;
     background-size: 100% 100%;
     &.cart-icon {
         background-image: url(../images/bascet-album.png);
     }
+    &.cart-info {
+        background-image: url(../images/info-album.png);
+    }
 }
+

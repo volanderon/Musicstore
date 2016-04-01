@@ -3,13 +3,21 @@ body {
   margin: 0 auto;
   position: absolute;
 }
+.truncate {
+  max-height: 100px;
+  overflow: hidden;
+}
 .my-icon {
   width: 30px;
   height: 30px;
+  margin: 0 5px;
   display: inline-block;
   cursor: pointer;
   background-size: 100% 100%;
 }
 .my-icon.cart-icon {
   background-image: url(../images/bascet-album.png);
+}
+.my-icon.cart-info {
+  background-image: url(../images/info-album.png);
 }
