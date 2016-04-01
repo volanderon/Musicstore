@@ -2,6 +2,9 @@
   margin-bottom: 20px;
   color: white;
 }
+.my-card.mc-compact .mc-inner {
+  height: 260px;
+}
 .my-card .mc-inner {
   height: 380px;
   background: black;
