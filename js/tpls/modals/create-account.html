@@ -1,20 +1,22 @@
-<div class="modal-header">
-    <h3 class="modal-title">Registration</h3>
-</div>
-<div class="modal-body">
-    <div>
-        <h2>Profile Information</h2>
-        <input type="text" class="form-control" placeholder="First Name"><br>
-        <input type="text" class="form-control" placeholder="Last Name"><br>
+<form name="createAccount.form" novalidate>
+    <div class="modal-header">
+        <h3 class="modal-title">Registration</h3>
     </div>
-    <div>
-        <h2>Login Data</h2>
-        <input type="text" class="form-control" placeholder="Email address"><br>
-        <input type="text" class="form-control" placeholder="Password"><br>
-        <input type="text" class="form-control" placeholder="Password confirmation"><br>
+    <div class="modal-body">
+        <div>
+            <h2>Profile Information</h2>
+            <input type="text" class="form-control" placeholder="First Name" required ng-model="createAccount.account.firstName"><br>
+            <input type="text" class="form-control" placeholder="Last Name" required ng-model="createAccount.account.lastName"><br>
+        </div>
+        <div>
+            <h2>Login Data</h2>
+            <input type="text" class="form-control" placeholder="Email address" required ng-model="createAccount.account.email"><br>
+            <input type="text" class="form-control" placeholder="Password" required ng-model="createAccount.account.password"><br>
+            <input type="text" class="form-control" placeholder="Password confirmation" required ng-model="createAccount.account.passwordConfirm"><br>
+        </div>
     </div>
-</div>
-<div class="modal-footer">
-    <button class="btn btn-primary" ng-click="">Register</button>
-    <button class="btn btn-danger" ng-click="">Reset</button>
-</div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="createAccount.register()" ng-disabled="!createAccount.form.$valid">Register</button>
+        <button class="btn btn-danger" ng-click="createAccount.reset()">Reset</button>
+    </div>
+</form>

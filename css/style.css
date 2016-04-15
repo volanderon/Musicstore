@@ -2,6 +2,9 @@
   max-height: 100px;
   overflow: hidden;
 }
+.ng-invalid.ng-dirty {
+  border-color: red;
+}
 .my-icon {
   width: 30px;
   height: 30px;
