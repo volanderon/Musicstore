@@ -16,7 +16,19 @@
             <div class="panel-heading">REGISTERED COSTUMERS</div>
             <div class="panel-body">
                 <p>If you have an account with us, please log in.</p>
-                <button class="btn btn-default">Login</button>
+                <form name="login.loginForm">
+                    <div class="input-group">
+                        <label for="email">Email Address</label><br>
+                        <input id="email" type="text" ng-model="login.loginInfo.email">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <label for="password">Password</label><br>
+                        <input id="password" type="password" ng-model="login.loginInfo.password">
+                    </div>
+                    <br>
+                    <button class="btn btn-default" ng-click="login.doLogin()">Login</button>
+                </form>
             </div>
         </div>
     </div>
