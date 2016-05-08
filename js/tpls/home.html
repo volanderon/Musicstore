@@ -1,13 +1,17 @@
-<div class="row">
+<div class="row main-albums">
     <div class="col-md-4" ui-sref="album({id: home.albums.big[0].album_id})">
-        <img class="col-xs-12" ng-src="images/{{home.albums.big[0].image_path}}"><br>
-        <strong>{{::home.albums.big[0].album_name}}</strong><br>
-        <strong>{{::home.albums.big[0].album_artist}}</strong>
+        <img class="col-xs-12 big-img" ng-src="images/{{home.albums.big[0].image_path}}">
+        <span class="text">
+            <span>{{::home.albums.big[0].album_name}}</span><br>
+            <span>{{::home.albums.big[0].album_artist}}</span>
+        </span>
     </div>
     <div class="col-md-2" ng-repeat="album in ::home.albums.header" ui-sref="album({id: album.album_id})">
         <img class="col-xs-12" ng-src="images/{{album.image_path}}"><br>
-        <strong>{{::album.album_name}}</strong><br>
-        <strong>{{::album.album_artist}}</strong>
+        <span class="text">
+            <span>{{::album.album_name}}</span><br>
+            <span>{{::album.album_artist}}</span>
+        </span>
     </div>
 </div>
 

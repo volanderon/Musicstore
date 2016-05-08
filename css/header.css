@@ -10,3 +10,54 @@
   font-size: 16px;
   color: black;
 }
+#header header {
+  background: red;
+}
+.main-albums {
+  width: 100%;
+  margin: 0;
+  background: black;
+}
+.main-albums div {
+  border: 1px solid black;
+}
+.main-albums div,
+.main-albums img {
+  padding: 0;
+  width: 214px;
+}
+.main-albums div:first-child,
+.main-albums .big-img {
+  width: 430px;
+}
+.main-albums div:first-child .text,
+.main-albums .big-img .text {
+  width: 430px;
+  font-size: 22px;
+}
+.main-albums div:first-child .text :first-child,
+.main-albums .big-img .text :first-child {
+  color: white;
+  font-size: 22px;
+}
+.main-albums div:first-child .text :last-child,
+.main-albums .big-img .text :last-child {
+  color: red;
+  font-size: 18px;
+}
+.main-albums .text {
+  position: absolute;
+  width: 214px;
+  padding: 4px;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+.main-albums .text :first-child {
+  color: white;
+  font-size: 17px;
+}
+.main-albums .text :last-child {
+  color: red;
+  font-size: 15px;
+}

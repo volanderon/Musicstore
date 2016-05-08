@@ -9,4 +9,56 @@
             color: black;
         }
     }
+    & header {
+        background: red;
+    }
+}
+
+.main-albums {
+    width: 100%;
+    margin: 0;
+    background: black;
+
+    & div {
+        border: 1px solid black;
+    }
+
+    & div, img {
+        padding: 0;
+        width: 214px;
+
+    }
+
+    & div:first-child, .big-img {
+        width: 430px;
+        & .text {
+            width: 430px;
+            font-size: 22px;
+            :first-child {
+                color: white;
+                font-size: 22px;
+            }
+            :last-child {
+                color: red;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .text {
+        position: absolute;
+        width: 214px;
+        padding: 4px;
+        left: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        :first-child {
+            color: white;
+            font-size: 17px;
+        }
+        :last-child {
+            color: red;
+            font-size: 15px;
+        }
+    }
 }
