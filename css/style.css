@@ -3,6 +3,9 @@
     width: 1318px;
   }
 }
+body {
+  background: #E3E3E3;
+}
 .truncate {
   max-height: 100px;
   overflow: hidden;

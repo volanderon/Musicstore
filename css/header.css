@@ -1,8 +1,9 @@
 #header {
-  width: 1170px;
   margin: 0 auto;
 }
 #header nav {
+  width: 1170px;
+  padding-left: 22%;
   display: inline-flex;
 }
 #header nav a {
@@ -11,7 +12,9 @@
   color: black;
 }
 #header header {
-  background: red;
+  width: 100%;
+  padding: 0 22%;
+  background: #F20000;
 }
 .main-albums {
   width: 100%;
