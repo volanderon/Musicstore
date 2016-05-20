@@ -2,8 +2,9 @@
   margin: 0 auto;
 }
 #header nav {
-  width: 1170px;
+  width: 100%;
   padding-left: 22%;
+  background-color: white;
   display: inline-flex;
 }
 #header nav a {
@@ -11,10 +12,24 @@
   font-size: 16px;
   color: black;
 }
+#header nav a:hover {
+  text-decoration: none;
+}
 #header header {
   width: 100%;
   padding: 0 22%;
   background: #F20000;
+}
+#header header div {
+  margin-top: 13px;
+  margin-bottom: -15px;
+}
+#header header .cart-count {
+  position: relative;
+  top: -68px;
+  left: 37px;
+  color: white;
+  font-size: 20px;
 }
 .main-albums {
   width: 100%;
