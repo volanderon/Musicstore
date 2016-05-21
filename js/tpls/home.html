@@ -18,7 +18,7 @@
 <breadcrumbs></breadcrumbs>
 
 <div class="row">
-    <div class="col-md-10">
+    <div class="home-container">
         <div class="col-md-3">
             <genre-sidebar></genre-sidebar>
             <div class="row my-card mc-compact" ng-repeat="album in ::home.albums.sidebar">
@@ -36,16 +36,16 @@
             </div>
         </div>
         <div class="col-md-9">
-            <div class="col-md-4 my-card mc-compact" ng-repeat="album in ::home.albums.content">
+            <div class="my-card mc-compact" ng-repeat="album in ::home.albums.content">
                 <div class="mc-inner">
                     <div ui-sref="album({id: album.album_id})">
-                        <img class="col-xs-12" ng-src="images/{{album.image_path}}"><br>
-                        <strong>{{::album.album_name}}</strong><br>
+                        <img ng-src="images/{{album.image_path}}"><br>
+                        <span>{{::album.album_name}}</span><br>
                     </div>
                     <div class="clearfix">
-                        <div class="pull-left">{{::album.album_price | currency}}</div>
-                        <div class="my-icon cart-icon pull-right" ng-click="main.addToCart(album)"></div>
+                        <span class="price pull-left">{{::album.album_price | currency}}</span>
                         <div class="my-icon cart-info pull-right"></div>
+                        <div class="my-icon cart-icon pull-right" ng-click="main.addToCart(album)"></div>
                     </div>
                 </div>
             </div>

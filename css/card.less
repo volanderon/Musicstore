@@ -1,9 +1,31 @@
+.home-container {
+  width: 868px;
+  margin: 0 auto;
+}
+
 .my-card {
   margin-bottom: 20px;
   color: white;
   &.mc-compact {
+    margin: 5px 0 5px 15px !important;
     .mc-inner {
+      border: 1px solid black;
       height: 260px;
+      width: 200px;
+      img {
+        width: 198px;
+        margin-bottom: 5px;
+      }
+      span {
+        position: relative;
+        left: 8px;
+        color: white;
+        font-size: 16px;
+      }
+      .price {
+        color: red;
+        font-size: 22px;
+      }
     }
   }
   .mc-inner {
