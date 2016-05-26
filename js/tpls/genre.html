@@ -9,20 +9,17 @@
                 {{::genre.stateParams.name}}
                 ({{::genre.albums.length}} items)
             </div>
-            <div class="col-md-4 my-card" ng-repeat="album in ::genre.albums">
+            <div class="col-md-4 my-card mc-genrepage" ng-repeat="album in ::genre.albums">
                 <div class="mc-inner">
                     <div ui-sref="album({id: album.album_id})">
                         <img class="col-xs-12" ng-src="images/{{album.image_path}}"><br>
                         <strong>{{::album.album_artist}} - {{::album.album_name}}</strong><br>
-                        <p class="truncate">{{::album.album_description}}</p><br>
-                        {{::album.album_price | currency}}
                     </div>
+                    <p class="truncate">{{::album.album_description}}</p><br>
                     <div class="clearfix">
+                        <div class="pull-left">{{::album.album_price | currency}}</div>
                         <div class="my-icon cart-icon pull-right" ng-click="cart.addToCart(album)"></div>
                         <div class="my-icon cart-info pull-right"></div>
-                    </div>
-                    <div>
-                        Add to Wishlist
                     </div>
                 </div>
             </div>

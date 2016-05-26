@@ -21,6 +21,7 @@
     <div class="home-container">
         <div class="col-md-3">
             <genre-sidebar></genre-sidebar>
+            <cart add-to-cart="addToCart"></cart>
             <div class="row my-card mc-compact" ng-repeat="album in ::home.albums.sidebar">
                 <div class="mc-inner">
                     <div ui-sref="album({id: album.album_id})">

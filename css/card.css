@@ -6,16 +6,21 @@
   margin-bottom: 20px;
   color: white;
 }
+.my-card.mc-genrepage .mc-inner {
+  height: 380px;
+}
 .my-card.mc-compact {
   margin: 5px 0 5px 15px !important;
 }
 .my-card.mc-compact .mc-inner {
   border: 1px solid black;
-  height: 260px;
-  width: 200px;
+  float: left;
+  margin: 10px 0 0 10px;
+  height: 280px;
+  width: 192px;
 }
 .my-card.mc-compact .mc-inner img {
-  width: 198px;
+  width: 190px;
   margin-bottom: 5px;
 }
 .my-card.mc-compact .mc-inner span {
