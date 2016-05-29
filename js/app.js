@@ -1,6 +1,7 @@
 angular.module('myApp', [
     'ui.router',
     'ngAnimate',
+    'ncy-angular-breadcrumb',
     'ui.bootstrap'
 ])
 .run(function ($rootScope, $state, $stateParams) {
@@ -22,6 +23,9 @@ angular.module('myApp', [
                 albums: function($http){
                     return $http.get('/musicstore/api/albums');
                 }
+            },
+            ncyBreadcrumb: {
+                label: 'Home'
             }
         })
         .state("genre", {
@@ -32,6 +36,9 @@ angular.module('myApp', [
                 albums: function($http, $stateParams){
                     return $http.get('/musicstore/api/albums/' + $stateParams.id);
                 }
+            },
+            ncyBreadcrumb: {
+                label: 'Home / Genre'
             }
         })
         .state("album", {
@@ -42,6 +49,9 @@ angular.module('myApp', [
                 album: function($http, $stateParams){
                     return $http.get('/musicstore/api/album/' + $stateParams.id);
                 }
+            },
+            ncyBreadcrumb: {
+                label: 'Home / Genre / Album'
             }
         })
         .state("wishlist", {

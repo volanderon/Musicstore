@@ -27,3 +27,11 @@ body {
 .my-icon.cart-info {
   background-image: url(../images/info-album.png);
 }
+.breadcrumb {
+  width: 838px;
+  padding: 8px 15px;
+  margin: 10px auto;
+  list-style: none;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
